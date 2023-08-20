@@ -4,18 +4,10 @@ export PATH
 
 #=================================================
 #	System Required: CentOS/Debian/Ubuntu
-#	Description: 三网回程路由详细测试
-#	Version: 2023.06.09_02
-#	Author: ChennHaoo
-#   参考：https://github.com/zq/shell/blob/master/autoBestTrace.sh  
-#         https://github.com/fscarmen/warp_unlock
-#         https://github.com/fscarmen/tools/blob/main/return.sh
-#         https://github.com/masonr/yet-another-bench-script/blob/master/yabs.sh
-#         https://github.com/sjlleo/nexttrace/blob/main/README_zh_CN.md
+#	Description: 四网回程路由线路测试
+#	Version: 2023.08.20
 #
-#	Blog: https://github.com/Chennhaoo
-#
-#   重要：若IP失效或提示404，请修改 $IPv4_IP 和 $IPv6_IP 部分IP
+#	Blog: https://www.wn12.cn/
 #=================================================
 
 #定义参数
@@ -288,15 +280,18 @@ BT_IPv4_IP_CN_Mtr(){
     BestTrace_Mode
     #开始测试IPv4库回程路由，第5个块是表示节点序号的，增删节点都要修改
     clear  
- 	BT_Ipv4_mtr_CN "${IPv4_1}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_1_name}" "No：1/9"
-    BT_Ipv4_mtr_CN "${IPv4_2}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_2_name}" "No：2/9"
-    BT_Ipv4_mtr_CN "${IPv4_3}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_3_name}" "No：3/9"
-    BT_Ipv4_mtr_CN "${IPv4_4}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_4_name}" "No：4/9"
-    BT_Ipv4_mtr_CN "${IPv4_5}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_5_name}" "No：5/9"
-    BT_Ipv4_mtr_CN "${IPv4_6}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_6_name}" "No：6/9"
-    BT_Ipv4_mtr_CN "${IPv4_7}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_7_name}" "No：7/9"
-    BT_Ipv4_mtr_CN "${IPv4_8}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_8_name}" "No：8/9"
-    BT_Ipv4_mtr_CN "${IPv4_9}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_9_name}" "No：9/9"
+    BT_Ipv4_mtr_CN "${IPv4_1}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_1_name}" "No：1/12"
+    BT_Ipv4_mtr_CN "${IPv4_2}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_2_name}" "No：2/12"
+    BT_Ipv4_mtr_CN "${IPv4_3}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_3_name}" "No：3/12"
+    BT_Ipv4_mtr_CN "${IPv4_4}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_4_name}" "No：4/12"
+    BT_Ipv4_mtr_CN "${IPv4_5}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_5_name}" "No：5/12"
+    BT_Ipv4_mtr_CN "${IPv4_6}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_6_name}" "No：6/12"
+    BT_Ipv4_mtr_CN "${IPv4_7}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_7_name}" "No：7/12"
+    BT_Ipv4_mtr_CN "${IPv4_8}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_8_name}" "No：8/12"
+    BT_Ipv4_mtr_CN "${IPv4_9}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_9_name}" "No：9/12"
+    BT_Ipv4_mtr_CN "${IPv4_10}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_10_name}" "No：10/12"
+    BT_Ipv4_mtr_CN "${IPv4_11}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_11_name}" "No：11/12"
+    BT_Ipv4_mtr_CN "${IPv4_12}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_12_name}" "No：12/12"
     #保留IPv4回程路由日志
     echo -e "${Info} 回程路由路径已保存在${Green_font_prefix} ${log} ${Font_color_suffix}中，如不需要请自行删除 !" 	
     #删除BestTrace执行文件
@@ -334,15 +329,18 @@ BT_IPv4_IP_EN_Mtr(){
     BestTrace_Mode
     #开始测试IPv4库回程路由，第5个块是表示节点序号的，增删节点都要修改
     clear  
- 	BT_Ipv4_mtr_EN "${IPv4_1}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_1_name}" "No：1/9"
-    BT_Ipv4_mtr_EN "${IPv4_2}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_2_name}" "No：2/9"
-    BT_Ipv4_mtr_EN "${IPv4_3}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_3_name}" "No：3/9"
-    BT_Ipv4_mtr_EN "${IPv4_4}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_4_name}" "No：4/9"
-    BT_Ipv4_mtr_EN "${IPv4_5}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_5_name}" "No：5/9"
-    BT_Ipv4_mtr_EN "${IPv4_6}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_6_name}" "No：6/9"
-    BT_Ipv4_mtr_EN "${IPv4_7}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_7_name}" "No：7/9"
-    BT_Ipv4_mtr_EN "${IPv4_8}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_8_name}" "No：8/9"
-    BT_Ipv4_mtr_EN "${IPv4_9}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_9_name}" "No：9/9"
+    BT_Ipv4_mtr_EN "${IPv4_1}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_1_name}" "No：1/12"
+    BT_Ipv4_mtr_EN "${IPv4_2}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_2_name}" "No：2/12"
+    BT_Ipv4_mtr_EN "${IPv4_3}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_3_name}" "No：3/12"
+    BT_Ipv4_mtr_EN "${IPv4_4}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_4_name}" "No：4/12"
+    BT_Ipv4_mtr_EN "${IPv4_5}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_5_name}" "No：5/12"
+    BT_Ipv4_mtr_EN "${IPv4_6}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_6_name}" "No：6/12"
+    BT_Ipv4_mtr_EN "${IPv4_7}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_7_name}" "No：7/12"
+    BT_Ipv4_mtr_EN "${IPv4_8}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_8_name}" "No：8/12"
+    BT_Ipv4_mtr_EN "${IPv4_9}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_9_name}" "No：9/12"
+    BT_Ipv4_mtr_EN "${IPv4_10}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_10_name}" "No：10/12"
+    BT_Ipv4_mtr_EN "${IPv4_11}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_11_name}" "No：11/12"
+    BT_Ipv4_mtr_EN "${IPv4_12}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_12_name}" "No：12/12"
     #保留IPv4回程路由日志
     echo -e "${Info} 回程路由路径已保存在${Green_font_prefix} ${log} ${Font_color_suffix}中，如不需要请自行删除 !" 	
     #删除BestTrace执行文件
@@ -380,15 +378,18 @@ NT_IPv4_IP_CN_Mtr(){
     Nexttrace_Mode
     #开始测试IPv4库回程路由，第5个块是表示节点序号的，增删节点都要修改
     clear    
- 	NT_Ipv4_mtr_CN "${IPv4_1}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_1_name}" "No：1/9"
-    NT_Ipv4_mtr_CN "${IPv4_2}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_2_name}" "No：2/9"
-    NT_Ipv4_mtr_CN "${IPv4_3}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_3_name}" "No：3/9"
-    NT_Ipv4_mtr_CN "${IPv4_4}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_4_name}" "No：4/9"
-    NT_Ipv4_mtr_CN "${IPv4_5}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_5_name}" "No：5/9"
-    NT_Ipv4_mtr_CN "${IPv4_6}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_6_name}" "No：6/9"
-    NT_Ipv4_mtr_CN "${IPv4_7}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_7_name}" "No：7/9"
-    NT_Ipv4_mtr_CN "${IPv4_8}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_8_name}" "No：8/9"
-    NT_Ipv4_mtr_CN "${IPv4_9}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_9_name}" "No：9/9"
+    NT_Ipv4_mtr_CN "${IPv4_1}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_1_name}" "No：1/12"
+    NT_Ipv4_mtr_CN "${IPv4_2}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_2_name}" "No：2/12"
+    NT_Ipv4_mtr_CN "${IPv4_3}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_3_name}" "No：3/12"
+    NT_Ipv4_mtr_CN "${IPv4_4}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_4_name}" "No：4/12"
+    NT_Ipv4_mtr_CN "${IPv4_5}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_5_name}" "No：5/12"
+    NT_Ipv4_mtr_CN "${IPv4_6}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_6_name}" "No：6/12"
+    NT_Ipv4_mtr_CN "${IPv4_7}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_7_name}" "No：7/12"
+    NT_Ipv4_mtr_CN "${IPv4_8}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_8_name}" "No：8/12"
+    NT_Ipv4_mtr_CN "${IPv4_9}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_9_name}" "No：9/12"
+    NT_Ipv4_mtr_CN "${IPv4_10}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_10_name}" "No：10/12"
+    NT_Ipv4_mtr_CN "${IPv4_11}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_11_name}" "No：11/12"
+    NT_Ipv4_mtr_CN "${IPv4_12}" "${Net_Mode}" "${Hop_Mode}" "${IPv4_12_name}" "No：12/12"
     #保留IPv4回程路由日志
     echo -e "${Info} 回程路由路径已保存在${Green_font_prefix} ${log} ${Font_color_suffix}中，如不需要请自行删除 !" 	
     #删除Nexttrace执行文件
@@ -1022,7 +1023,14 @@ NT_Specify_IPv6_EN_Mtr(){
 #启动菜单区===============================================
 #脚本不加参数时的启动菜单
 Stand_AutoTrace(){
-echo -e " 服务器信息（优先显示IPv4，仅供参考）：
+echo -e "
+#=============================================================#
+#	支持系统: CentOS/Debian/Ubuntu                         #
+#	功能介绍: 测试电信、联通、移动、教育网四网回程路由线路     #
+#	更新时间: 2023.08.20                                   #
+#	详情介绍: https://www.wn12.cn/3113.html                #
+#=============================================================#
+服务器信息（优先显示IPv4，仅供参考）：
 ————————————————————————————————————
  ISP      :${Red_font_prefix} $ISP_Print ${Font_color_suffix} 
  ASN      :${Red_font_prefix} $ASN_Print ${Font_color_suffix}
@@ -1033,7 +1041,7 @@ echo -e " 服务器信息（优先显示IPv4，仅供参考）：
  IPv6地址 :${Red_font_prefix} $IPv6_Print ${Font_color_suffix}
  IP 性质  :${Red_font_prefix} $TYPE_Print ${Font_color_suffix}
 
- 测试项（TCP Mode，三网回程测试点均为 9 个）：
+ 测试项（TCP Mode，四网回程测试点均 9 个）：
 ————————————————————————————————————
 ${Green_font_prefix} 1. ${Font_color_suffix}本机 IPv4 三网回程路由 中文 输出 BestTrace库（默认）
 ${Green_font_prefix} 2. ${Font_color_suffix}本机 IPv4 三网回程路由 中文 输出 Nexttrace库
