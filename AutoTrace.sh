@@ -1025,11 +1025,11 @@ NT_Specify_IPv6_EN_Mtr(){
 Stand_AutoTrace(){
 echo -e "
 #=============================================================#
-#       Linux云服务器回程线路一键测试脚本                        #
-#	支持系统: CentOS/Debian/Ubuntu                         #
+#       Linux云服务器回程线路一键测试脚本                     #
+#	支持系统: CentOS/Debian/Ubuntu                        #
 #	功能介绍: 测试电信、联通、移动、教育网四网回程路由线路#
-#	更新时间: 2023.08.20                                   #
-#	详情介绍: https://www.wn12.cn/3113.html                #
+#	更新时间: 2023.08.20                                  #
+#	详情介绍: https://www.wn12.cn/3113.html               #
 #=============================================================#
 服务器信息（优先显示IPv4，仅供参考）：
 ————————————————————————————————————
@@ -1043,9 +1043,9 @@ echo -e "
 
  测试项（TCP Mode，四网回程测试节点共 12 个）：
 ————————————————————————————————————
-${Green_font_prefix} 1. ${Font_color_suffix}本机 IPv4 三网回程路由 中文 输出 BestTrace库（默认）
-${Green_font_prefix} 2. ${Font_color_suffix}本机 IPv4 三网回程路由 中文 输出 Nexttrace库
-${Green_font_prefix} 3. ${Font_color_suffix}本机 IPv4 三网回程路由 英文 输出 BestTrace库
+${Green_font_prefix} 1. ${Font_color_suffix}本机 IPv4 四网回程路由 中文 输出 BestTrace库（默认）
+${Green_font_prefix} 2. ${Font_color_suffix}本机 IPv4 四网回程路由 中文 输出 Nexttrace库
+${Green_font_prefix} 3. ${Font_color_suffix}本机 IPv4 四网回程路由 英文 输出 BestTrace库
 ${Green_font_prefix} 4. ${Font_color_suffix}本机 IPv6 三网回程路由 中文 输出 Nexttrace库
 ${Green_font_prefix} 5. ${Font_color_suffix}本机 IPv6 三网回程路由 英文 输出 Nexttrace库
 ${Green_font_prefix} 6. ${Font_color_suffix}本机到指定 IPv4/IPv6 路由（BestTrace/Nexttrace）
@@ -1054,15 +1054,15 @@ ${Green_font_prefix} 7. ${Font_color_suffix}退出测试
     read -e -p " 请输入需要的测试项 [1-7] ( 默认：1 ）：" Stand_AutoTrace_num
     [[ -z "${Stand_AutoTrace_num}" ]] && Stand_AutoTrace_num="1"
     if [[ ${Stand_AutoTrace_num} == "1" ]]; then
-        echo -e "${Info} 您选择的是：本机 IPv4 三网回程路由 中文 输出 BestTrace库，已开始测试 !
+        echo -e "${Info} 您选择的是：本机 IPv4 四网回程路由 中文 输出 BestTrace库，已开始测试 !
         "
         BT_IPv4_IP_CN_Mtr
     elif [[ ${Stand_AutoTrace_num} == "2" ]]; then            
-        echo -e "${Info} 您选择的是：本机 IPv4 三网回程路由 中文 输出 Nexttrace库，已开始测试 !
+        echo -e "${Info} 您选择的是：本机 IPv4 四网回程路由 中文 输出 Nexttrace库，已开始测试 !
         "
         NT_IPv4_IP_CN_Mtr 
     elif [[ ${Stand_AutoTrace_num} == "3" ]]; then     
-        echo -e "${Info} 您选择的是：本机 IPv4 三网回程路由 英文 输出 BestTrace库，已开始测试 !
+        echo -e "${Info} 您选择的是：本机 IPv4 四网回程路由 英文 输出 BestTrace库，已开始测试 !
         "
         BT_IPv4_IP_EN_Mtr
     elif [[ ${Stand_AutoTrace_num} == "4" ]]; then 
