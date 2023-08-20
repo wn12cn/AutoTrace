@@ -2,21 +2,13 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
-#=================================================
-#	System Required: CentOS/Debian/Ubuntu
-#	Description: 三网回程路由详细测试
-#	Version: 2023.06.1
-#	Author: ChennHaoo
-#   参考：https://github.com/zq/shell/blob/master/autoBestTrace.sh  
-#         https://github.com/fscarmen/warp_unlock
-#         https://github.com/fscarmen/tools/blob/main/return.sh
-#         https://github.com/masonr/yet-another-bench-script/blob/master/yabs.sh
-#         https://github.com/sjlleo/nexttrace/blob/main/README_zh_CN.md
-#
-#	Blog: https://github.com/Chennhaoo
-#
-#   重要：若IP失效或提示404，请修改 $IPv4_IP 和 $IPv6_IP 部分IP
-#=================================================
+=================================================
+	System Required: CentOS/Debian/Ubuntu
+	Description: 一键三网回程路由追踪测试脚本
+	Version: 2023.08.20
+
+	Blog: https://www.wn12.cn/
+=================================================
 
 #定义参数
 filepath=$(cd "$(dirname "$0")"; pwd)
