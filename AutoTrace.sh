@@ -1025,8 +1025,9 @@ NT_Specify_IPv6_EN_Mtr(){
 Stand_AutoTrace(){
 echo -e "
 #=============================================================#
+#       Linux云服务器回程线路一键测试脚本                        #
 #	支持系统: CentOS/Debian/Ubuntu                         #
-#	功能介绍: 测试电信、联通、移动、教育网四网回程路由线路     #
+#	功能介绍: 测试电信、联通、移动、教育网四网回程路由线路#
 #	更新时间: 2023.08.20                                   #
 #	详情介绍: https://www.wn12.cn/3113.html                #
 #=============================================================#
@@ -1039,9 +1040,8 @@ echo -e "
  地址     :${Red_font_prefix} $Location_Print ${Font_color_suffix}
  IPv4地址 :${Red_font_prefix} $IPv4_Print ${Font_color_suffix}
  IPv6地址 :${Red_font_prefix} $IPv6_Print ${Font_color_suffix}
- IP 性质  :${Red_font_prefix} $TYPE_Print ${Font_color_suffix}
 
- 测试项（TCP Mode，四网回程测试点均 9 个）：
+ 测试项（TCP Mode，四网回程测试节点共 12 个）：
 ————————————————————————————————————
 ${Green_font_prefix} 1. ${Font_color_suffix}本机 IPv4 三网回程路由 中文 输出 BestTrace库（默认）
 ${Green_font_prefix} 2. ${Font_color_suffix}本机 IPv4 三网回程路由 中文 输出 Nexttrace库
