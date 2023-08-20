@@ -2,13 +2,13 @@
 PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
 export PATH
 
-=================================================
-	System Required: CentOS/Debian/Ubuntu
-	Description: 一键三网回程路由追踪测试脚本
-	Version: 2023.08.20
-
-	Blog: https://www.wn12.cn/
-=================================================
+#=================================================
+#	System Required: CentOS/Debian/Ubuntu
+#	Description: 一键三网回程路由追踪测试脚本
+#	Version: 2023.08.20
+#	
+#	Blog: https://www.wn12.cn/
+#=================================================
 
 #定义参数
 filepath=$(cd "$(dirname "$0")"; pwd)
